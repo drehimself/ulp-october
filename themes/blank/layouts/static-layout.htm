@@ -1,0 +1,31 @@
+[staticPage]
+useContent = 1
+default = 0
+
+[staticMenu]
+code = "main"
+==
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>October CMS - {{ this.page.title }}</title>
+    <link rel="stylesheet" href="{{ 'assets/main.css' | theme }}">
+    {% styles %}
+</head>
+<body>
+    <header>
+        {% component 'staticMenu' %}
+    </header>
+    
+    <div id="main-content">
+        {% component 'staticPage' %}
+    </div>
+    
+    <footer>
+        {% partial 'footer' %}
+    </footer>
+    
+    {% scripts %}
+</body>
+</html>

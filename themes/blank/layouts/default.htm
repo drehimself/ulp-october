@@ -1,0 +1,25 @@
+==
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>October CMS - {{ this.page.title }}</title>
+    <link rel="stylesheet" href="{{ 'assets/main.css' | theme }}">
+    {% styles %}
+</head>
+<body>
+    <header>
+        {% partial 'header' %}
+    </header>
+    
+    <div id="main-content">
+        {% page %}
+    </div>
+    
+    <footer>
+        {% partial 'footer' %}
+    </footer>
+    
+    {% scripts %}
+</body>
+</html>
